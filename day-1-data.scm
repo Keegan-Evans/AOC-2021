@@ -1,10 +1,3 @@
-(define (count_depth_increases readings)
-  (cond ((= (length readings) 1)
-         0)
-        ((< (car readings) (cadr readings))
-         (+ (count_depth_increases (cdr readings)) 1))
-        (else (count_depth_increases (cdr readings)))))
-
 (define elf-readings '(  
   109  117  118  98  102  94  101  109  121  126  117
   116  134  119  98  97  96  98  101  107  123  134
