@@ -3,7 +3,7 @@
 (define (count_depth_increases window readings)
   (cond ((= (length readings) window)
          0)
-        ((< (calculate-window window readings) 
+        ((< (calculate-window window readings)
             (calculate-window window (cdr readings)))
          (+ (count_depth_increases window (cdr readings)) 1))
         (else (count_depth_increases window (cdr readings)))))
